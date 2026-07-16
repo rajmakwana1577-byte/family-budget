@@ -15,6 +15,7 @@ const TITLES = {
   history: "Expense History",
   report: "Budget Report",
   settings: "Settings",
+  grocery: "Grocery List",
 };
 
 export default function App() {
