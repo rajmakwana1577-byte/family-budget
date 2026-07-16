@@ -53,7 +53,7 @@ export default function App() {
         {tab === "history" && <History data={data} persist={persist} />}
         {tab === "report" && <Report data={data} />}
         {tab === "settings" && <SettingsView data={data} persist={persist} storageOk={storageOk} />}
-
+{tab === "grocery" && <GroceryList data={data} persist={persist} />}
         <BottomNav tab={tab} setTab={setTab} />
       </div>
     </div>
