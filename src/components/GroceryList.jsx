@@ -75,7 +75,9 @@ export default function GroceryList({ data, persist }) {
       grocery: next,
     });
   };
-
+const purchased = grocery.filter((item) => item.done).length;
+const totalItems = ITEMS.length;
+const progress = Math.round((purchased / totalItems) * 100);
   const total = grocery.reduce(
     (sum, item) =>
       sum + (Number(item.qty || 0) * Number(item.price || 0)),
