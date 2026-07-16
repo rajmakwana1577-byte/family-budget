@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, PlusCircle, List, PieChart as PieIcon, Settings as SettingsIcon } from "lucide-react";
+import { Home, PlusCircle, List, PieChart as PieIcon, Settings as SettingsIcon, ShoppingCart } from "lucide-react";
 
 const NAV = [
   { key: "home", label: "Home", icon: Home },
@@ -7,6 +7,7 @@ const NAV = [
   { key: "history", label: "History", icon: List },
   { key: "report", label: "Report", icon: PieIcon },
   { key: "settings", label: "Settings", icon: SettingsIcon },
+  { key: "grocery", label: "Grocery", icon: ShoppingCart },
 ];
 
 export default function BottomNav({ tab, setTab }) {
