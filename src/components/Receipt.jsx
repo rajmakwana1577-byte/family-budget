@@ -86,11 +86,12 @@ export default function Receipt({ data, onBack }) {
               ⬅ Back
             </button>
 
-                        <button
-              className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
-            >
-              📄 Download PDF
-            </button>
+            <button
+  type="button"
+  className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
+>
+  📄 Download PDF
+</button>
 
           </div>
 
@@ -98,6 +99,6 @@ export default function Receipt({ data, onBack }) {
 
       </div>
 
-    </div>
+        </div>
   );
       }
