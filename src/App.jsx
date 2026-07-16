@@ -5,6 +5,7 @@ import AddExpense from "./components/AddExpense.jsx";
 import History from "./components/History.jsx";
 import Report from "./components/Report.jsx";
 import SettingsView from "./components/SettingsView.jsx";
+import GroceryList from "./components/GroceryList.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import { loadData, saveData, isStorageAvailable, emptyData } from "./storage.js";
 
