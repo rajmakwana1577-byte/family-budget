@@ -29,7 +29,15 @@ export default function App() {
     setStorageOk(isStorageAvailable());
     setData(loadData());
   }, []);
+useEffect(() => {
+  const openReceipt = () => setShowReceipt(true);
 
+  window.addEventListener("openReceipt", openReceipt);
+
+  return () => {
+    window.removeEventListener("openReceipt", openReceipt);
+  };
+}, []);
   const persist = useCallback((next) => {
     setData(next);
     const ok = saveData(next);
