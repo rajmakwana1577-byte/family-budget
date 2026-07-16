@@ -187,3 +187,11 @@ const progress = Math.round((purchased / totalItems) * 100);
     </div>
   );
 }
+<div className="mt-4">
+  <button
+    onClick={() => window.dispatchEvent(new Event("openReceipt"))}
+    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all"
+  >
+    🧾 View Receipt
+  </button>
+</div>
