@@ -90,7 +90,24 @@ const progress = Math.round((purchased / totalItems) * 100);
         <h2 className="text-lg font-bold mb-3">
           🥔 Grocery List
         </h2>
+<div className="mb-4">
+  <div className="flex justify-between text-sm font-medium mb-1">
+    <span>🛒 Progress</span>
+    <span>{progress}%</span>
+  </div>
 
+  <div className="w-full bg-gray-200 rounded-full h-3">
+    <div
+      className="bg-green-500 h-3 rounded-full transition-all duration-300"
+      style={{ width: `${progress}%` }}
+    ></div>
+  </div>
+
+  <div className="flex justify-between text-xs text-gray-500 mt-2">
+    <span>✅ {purchased} / {totalItems} Purchased</span>
+    <span>🛍️ {totalItems - purchased} Remaining</span>
+  </div>
+</div>
         <div className="space-y-3">
 
           {ITEMS.map((item) => {
