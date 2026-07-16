@@ -84,8 +84,6 @@ export default function Receipt({ data, onBack }) {
               className="flex-1 bg-gray-200 rounded-xl py-3 font-medium"
             >
               ⬅ Back
-            </button>
-
             <button
   type="button"
   className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
