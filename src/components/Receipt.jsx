@@ -86,7 +86,7 @@ export default function Receipt({ data, onBack }) {
               ⬅ Back
             </button>
 
-            <button
+                        <button
               className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
             >
               📄 Download PDF
