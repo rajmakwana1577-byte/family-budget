@@ -171,7 +171,14 @@ const progress = Math.round((purchased / totalItems) * 100);
         <div className="mt-2 text-3xl font-bold text-green-700">
           ₹{total}
         </div>
-
+<div className="mt-5">
+  <button
+    onClick={() => window.dispatchEvent(new Event("openReceipt"))}
+    className="w-full bg-green-600 text-white py-3 rounded-xl font-bold shadow-lg"
+  >
+    🧾 View Receipt
+  </button>
+</div>
         <div className="mt-2 text-sm text-gray-500">
           Qty × Price का Total अपने आप निकल जाएगा।
         </div>
