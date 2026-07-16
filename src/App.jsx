@@ -6,6 +6,7 @@ import History from "./components/History.jsx";
 import Report from "./components/Report.jsx";
 import SettingsView from "./components/SettingsView.jsx";
 import GroceryList from "./components/GroceryList.jsx";
+import Receipt from "./components/Receipt.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import { loadData, saveData, isStorageAvailable, emptyData } from "./storage.js";
 
@@ -21,6 +22,7 @@ const TITLES = {
 export default function App() {
   const [data, setData] = useState(null);
   const [tab, setTab] = useState("home");
+  const [showReceipt, setShowReceipt] = useState(false);
   const [storageOk, setStorageOk] = useState(true);
 
   useEffect(() => {
@@ -43,7 +45,17 @@ export default function App() {
     );
   }
 
+  
+    if (showReceipt) {
   return (
+    <Receipt
+      data={data}
+      onBack={() => setShowReceipt(false)}
+    />
+  );
+}
+
+return (
     <div className="min-h-screen w-full flex justify-center" style={{ background: "#F1EADA" }}>
       <div className="w-full max-w-2xl min-h-screen relative" style={{ background: "#FBF6EC" }}>
         <Header title={TITLES[tab]} onBack={tab !== "home" ? () => setTab("home") : null} />
