@@ -11,7 +11,6 @@ export default function Receipt({ data, onBack }) {
   );
 
   const receiptNo = "RCP-" + Date.now().toString().slice(-6);
-
   const today = new Date().toLocaleString("en-IN");
 
   return (
@@ -38,13 +37,15 @@ export default function Receipt({ data, onBack }) {
         </div>
 
         <div className="mt-5">
+
           <div className="grid grid-cols-4 font-bold border-b pb-2">
             <div>Item</div>
             <div className="text-center">Qty</div>
             <div className="text-center">Price</div>
             <div className="text-right">Amount</div>
-          </div> 
-                    {grocery.map((item, index) => {
+          </div>
+
+          {grocery.map((item, index) => {
             const amount =
               Number(item.qty || 0) *
               Number(item.price || 0);
@@ -69,27 +70,31 @@ export default function Receipt({ data, onBack }) {
                 </div>
               </div>
             );
-          })} 
-                  <div className="border-t mt-5 pt-4">
+          })}
 
-          <div className="flex justify-between text-lg font-semibold">
-            <span>Total</span>
-            <span>₹{total}</span>
-          </div>
+          <div className="border-t mt-5 pt-4">
 
-          <div className="mt-6 flex gap-3">
+            <div className="flex justify-between text-lg font-semibold">
+              <span>Total</span>
+              <span>₹{total}</span>
+            </div>
 
-            <button
-              onClick={onBack}
-              className="flex-1 bg-gray-200 rounded-xl py-3 font-medium"
-            >
-              ⬅ Back
-            <button
-  type="button"
-  className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
->
-  📄 Download PDF
-</button>
+            <div className="mt-6 flex gap-3"> 
+                            <button
+                onClick={onBack}
+                className="flex-1 bg-gray-200 rounded-xl py-3 font-medium"
+              >
+                ⬅ Back
+              </button>
+
+              <button
+                type="button"
+                className="flex-1 bg-green-600 text-white rounded-xl py-3 font-medium"
+              >
+                📄 Download PDF
+              </button>
+
+            </div>
 
           </div>
 
@@ -97,6 +102,6 @@ export default function Receipt({ data, onBack }) {
 
       </div>
 
-        </div>
+    </div>
   );
-      }
+}
